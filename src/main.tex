@@ -1,0 +1,83 @@
+\documentclass[11p]{article}
+% Packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{fancyheadings}
+\usepackage[swedish]{babel}
+\usepackage[
+    backend=biber,
+    style=authoryear-ibid,
+    sorting=ynt
+]{biblatex}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%Källor
+\addbibresource{references.bib}
+\graphicspath{ {./images/} }
+
+% Lite variabler
+\def\email{Endo.Axelsson@ga.ntig.se}
+\def\foottitle{PMmall}
+\def\name{Endo Axelsson}
+
+\title{PMmall \\ \small Gymnasiearbete}
+\author{\name}
+\date{\today}
+
+\begin{document}
+
+% fixar sidfot
+\lfoot{\footnotesize{\name \\ \email}}
+\rfoot{\footnotesize{\today}}
+\lhead{\sc\footnotesize\foottitle}
+\rhead{\nouppercase{\sc\footnotesize\leftmark}}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.2pt}
+
+% i Sverige har vi normalt inget indrag vid nytt stycke
+\setlength{\parindent}{0pt}
+% men däremot lite mellanrum
+\setlength{\parskip}{10pt}
+
+\maketitle
+
+\section{Metod}
+I denna undersökning så kommer en grupp av personer bli indelad i två olika testgrupper: A och B, för att avgöra om musik faktist förbättrar arbetsminnet.
+Genre på musik är en stor faktor gällande arbetsminne, så Grupp A får hörlurar där klassiskt musik spelas och grupp B gör undersökningen ljudlöst.
+\newline För att avgöra detta så används memory spel som ett verktyg.
+I detta fall så ska memory spelet visa 30 styckna kort med olika bilder på, korten visas i 30 sekunder innan dem vänds.
+\newline Alla kort ligger på samma ställe för alla, för att det ska vara rättvist och minska slumpäss faktorn.
+Målet är att komma ihåg så många kort som möjligt och med hjälp av musiken länka det visuella till ljud.
+Arbetet utförs enskilt för att mäta hur mycket varje individ kommer ihåg utan någon påverkan av andra.
+
+\subsection{Memory spel}
+Spelen som redan existerade på nätet var för slumpässiga för att få ett rättvist och en stabil resultat.
+det fel som inte var passande för undersökningen: korten blandades om för varje omgång som spelades och visades inte i början, vilket gör att de första kortvändingarna ökar felmarginalen.
+Så för att undvika detta så ska spelet kodas från grund med hjälp av visual studio code.
+Sidan ska laddas upp på glitch därefter.
+Glitch är en webbsida som tar in data.
+Så från testsidan så skickas svaren in till Glitch och all information är på samma ställe.
+Detta underlättar mätningen av resultaten i slutändan.
+
+\subsection{Process}
+Testet inleds med att presentera kort för deltagarna vad arbetet kommer att handla om.
+Presentationen ska vara kort men effektiv visa varför detta utförs och vad målet med undersökningen är.
+Sedan blir deltagarna indelade i två grupper, A och B för att därefter få materialen som krävs för respektiv grupp, hörlurar för de i grupp A.
+Innan testet faktist börjar och för att det ska bli så riskfritt så möjligt så kommer instruktionerna precis innan.
+Det innehåller spelets innehåll, regler och vad målet är med det.
+Länken för memory spelet delas ut i ett classroom där all deltagande har tillgång till.
+Väl inne i memory spelet så kommer två alternativ att visa sig: alternativ A och alternativ B.
+Detta existerar för att dela in svaren som kommer in.
+Grupp A ska välja alternativet A och grupp B ska välja B.
+\newline Efter så sätts hörlurarna på för de som har det.
+Under en begränsad tid på max 10 minuter så bör alla ha startat spelet.
+Det är 30 kort totalt och med hälp av att korten visar sig 30 sekunder i början av spelets gång, så ska deltagarna para ihop så många par så möjligt med så lite fel så möjligt innan tiden tar slut.
+Då spelets gång är klar oavsett om det är för att tiden tog slut eller att man parat alla så avslutas det.
+När alla som har deltagit är klara så skickas all resultat och data till Glitch.
+Vilket gör att det sedan kan göras en beräkning av en slutsats om vilken grupp som presterat bättre än den andra.
+
+
+\printbibliography
+
+\end{document}
